@@ -1,0 +1,19 @@
+    <!-- drawable/platter.xml -->
+<vector
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:aapt="http://schemas.android.com/aapt"
+android:width="343dp"
+android:height="300dp"
+android:viewportWidth="343"
+android:viewportHeight="544"
+    >
+<group>
+    <clip-path
+        android:pathData="M12 0H331C337.627 0 343 5.37258 343 12V532C343 538.627 337.627 544 331 544H12C5.37258 544 0 538.627 0 532V12C0 5.37258 5.37258 0 12 0Z"
+        />
+    <path
+        android:pathData="M0 0V544H343V0"
+        android:fillColor="#1f1f1f"
+        />
+</group>
+</vector>

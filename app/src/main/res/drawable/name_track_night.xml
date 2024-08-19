@@ -1,0 +1,19 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="45dp"/>
+            /> <!-- 투명도를 적용한 색상 -->
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="15dp"
+                android:bottomLeftRadius="15dp"
+                android:topRightRadius="45dp"
+                android:bottomRightRadius="45dp"/>
+            <solid android:color="#CC8a8a8a"/> <!-- 투명도를 적용한 색상 -->
+            <stroke android:width="2dp" android:color="#50404040"/>
+        </shape>
+    </item>
+</selector>

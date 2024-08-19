@@ -1,0 +1,44 @@
+<!-- res/drawable/button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <!-- 눌렸을 때의 상태 -->
+        <ripple android:color="#6a8eca"> <!-- 터치 눌렀을때 색상 -->
+            <item android:id="@android:id/background">
+                <shape android:shape="rectangle">
+                    <solid android:color="#3c5b8e"/> <!-- 터치 눌렀을때 애니메이션 색상 -->
+                    <corners android:radius="10dp"/> <!-- 이 부분을 추가하여 둥글게 만듭니다. -->
+                </shape>
+            </item>
+        </ripple>
+    </item>
+    <item android:state_pressed="false">
+        <!-- 일반 상태 -->
+        <layer-list>
+            <item>
+                <!-- 배경 모양 -->
+                <shape>
+                    <solid android:color="#41b1eb"/> <!-- 이 부분을 수정하여 일반 상태의 배경 색을 지정합니다. -->
+                    <corners android:radius="10dp"/> <!-- 이 부분을 추가하여 둥글게 만듭니다. -->
+                    <!-- 테두리 추가 -->
+                    <stroke
+                        android:width="2dp"
+                        android:color="#FFFF"/> <!-- 테두리의 두께와 색상을 지정합니다. -->
+                </shape>
+            </item>
+            <item>
+                <!-- Vector drawable -->
+                <vector xmlns:aapt="http://schemas.android.com/aapt"
+                    android:width="56dp"
+                    android:height="56dp"
+                    android:viewportWidth="86"
+                    android:viewportHeight="44">
+                    <group>
+                        <clip-path android:pathData="M8 0H78C82.4183 0 86 3.58172 86 8V36C86 40.4183 82.4183 44 78 44H8C3.58172 44 0 40.4183 0 36V8C0 3.58172 3.58172 0 8 0Z" />
+                        <path
+                            android:pathData="M0 0V44H86V0" />
+                    </group>
+                </vector>
+            </item>
+        </layer-list>
+    </item>
+</selector>

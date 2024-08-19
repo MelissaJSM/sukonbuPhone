@@ -1,0 +1,71 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_pressed="true">
+    <!-- 눌렸을 때의 상태 -->
+    <ripple android:color="#806a8eca"> <!-- 터치 눌렀을때 색상 -->
+      <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+          <solid android:color="#803c5b8e"/> <!-- 터치 눌렀을때 애니메이션 색상 -->
+          <corners android:radius="20dp"/> <!-- 이 부분을 추가하여 둥글게 만듭니다. -->
+        </shape>
+      </item>
+    </ripple>
+  </item>
+  <item android:state_pressed="false">
+    <!-- 일반 상태 -->
+    <layer-list>
+      <item>
+        <!-- 배경 모양 -->
+        <shape>
+          <solid android:color="#41b1eb"/> <!-- 이 부분을 수정하여 일반 상태의 배경 색을 지정합니다. -->
+          <corners android:radius="20dp"/> <!-- 이 부분을 추가하여 둥글게 만듭니다. -->
+          <stroke
+              android:width="2dp"
+              android:color="#FFFF"/> <!-- 테두리의 두께와 색상을 지정합니다. -->
+        </shape>
+      </item>
+      <item>
+        <!-- Vector drawable -->
+        <selector>
+          <item android:state_pressed="true">
+            <!-- 클릭시 변경될 벡터 이미지 -->
+            <vector xmlns:aapt="http://schemas.android.com/aapt"
+                android:width="86dp"
+                android:height="44dp"
+                android:viewportWidth="86"
+                android:viewportHeight="44">
+              <group>
+                <clip-path android:pathData="M8 0H78C82.4183 0 86 3.58172 86 8V36C86 40.4183 82.4183 44 78 44H8C3.58172 44 0 40.4183 0 36V8C0 3.58172 3.58172 0 8 0Z" />
+                <path
+                    android:pathData="M0 0V44H86V0" />
+              </group>
+            </vector>
+          </item>
+          <item android:state_pressed="false">
+            <!-- 일반 상태의 벡터 이미지 -->
+            <vector
+                android:width="36dp"
+                android:height="36dp"
+                android:viewportWidth="36"
+                android:viewportHeight="36">
+              <group>
+                <clip-path
+                    android:pathData="M18,0L18,0A18,18 0,0 1,36 18L36,18A18,18 0,0 1,18 36L18,36A18,18 0,0 1,0 18L0,18A18,18 0,0 1,18 0z"/>
+                <path
+                    android:pathData="M18,0L18,0A18,18 0,0 1,36 18L36,18A18,18 0,0 1,18 36L18,36A18,18 0,0 1,0 18L0,18A18,18 0,0 1,18 0z"
+                    android:fillColor="#000000"/>
+                <group>
+                  <clip-path
+                      android:pathData="M18,0L18,0A18,18 0,0 1,36 18L36,18A18,18 0,0 1,18 36L18,36A18,18 0,0 1,0 18L0,18A18,18 0,0 1,18 0z"/>
+                  <path
+                      android:pathData="M27,18.786C27,19.062 26.776,19.286 26.5,19.286H19.286V26.5C19.286,26.776 19.062,27 18.786,27H17.214C16.938,27 16.714,26.776 16.714,26.5V19.286H9.5C9.224,19.286 9,19.062 9,18.786V17.214C9,16.938 9.224,16.714 9.5,16.714H16.714V9.5C16.714,9.224 16.938,9 17.214,9H18.786C19.062,9 19.286,9.224 19.286,9.5V16.714H26.5C26.776,16.714 27,16.938 27,17.214V18.786Z"
+                      android:fillColor="#ffffff"
+                      android:fillType="evenOdd"/>
+                </group>
+              </group>
+            </vector>
+          </item>
+        </selector>
+      </item>
+    </layer-list>
+  </item>
+</selector>

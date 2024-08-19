@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroScreenSettingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/intro_screen_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:paddingLeft="20dp"
+                android:text="@string/IntroScreenName"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="35dp"
+                android:text="@string/introScreen"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#BDBDBD" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/intro_btn_next_button"
+            android:layout_below="@+id/intro_screen_bar">
+
+
+            <LinearLayout
+                android:id="@+id/intro_screen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/intro_darkmode_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:lineSpacingExtra="6.4sp"
+                    android:text="@string/darkmodeText"
+                    android:textColor="#2b2e32"
+                    android:textOff=""
+                    android:textOn=""
+                    android:textSize="17sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchMinWidth="0dp"
+                    app:thumbTextPadding="24dp"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/intro_orientation_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:lineSpacingExtra="6.4sp"
+                    android:text="@string/orientationText"
+                    android:textColor="#2b2e32"
+                    android:textOff=""
+                    android:textOn=""
+                    android:textSize="17sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchMinWidth="0dp"
+                    app:thumbTextPadding="24dp"
+                    app:track="@drawable/track" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/intro_switch_bright"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/white"
+                        android:lineSpacingExtra="6.4sp"
+                        android:text="@string/brigntText"
+                        android:textColor="#2b2e32"
+                        android:textOff=""
+                        android:textOn=""
+                        android:textSize="17sp"
+                        android:thumb="@drawable/thumb"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:switchMinWidth="0dp"
+                        app:thumbTextPadding="24dp"
+                        app:track="@drawable/track" />
+
+                    <SeekBar
+                        android:id="@+id/intro_seekbar_bright"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:max="10"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/intro_text_bright"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/brigntValue" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/intro_bubble_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:lineSpacingExtra="6.4sp"
+                    android:text="@string/bubble"
+                    android:textColor="#2b2e32"
+                    android:textOff=""
+                    android:textOn=""
+                    android:textSize="17sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchMinWidth="0dp"
+                    app:thumbTextPadding="24dp"
+                    app:track="@drawable/track" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingStart="21dp"
+                        android:text="@string/expansionText"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="96dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/img_character_normal"
+                            tools:ignore="NestedWeights" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/img_character_expansion" />
+                    </LinearLayout>
+
+
+                    <RadioGroup
+                        android:id="@+id/intro_group_expansion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/intro_btn_expansion_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/expansionOff" />
+
+                        <RadioButton
+                            android:id="@+id/intro_btn_expansion_yes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/expansionOn" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+        </ScrollView>
+
+
+        <android.widget.Button
+            android:id="@+id/intro_btn_next_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/button_layout"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

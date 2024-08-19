@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".IntroAttentionPleaseActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sync_apps"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:lineSpacingExtra="-1sp"
+                android:text="추가 파일을 다운로드 합니다."
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/import_your"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:lineSpacingExtra="5sp"
+                android:text="스콘부짱의 모션을 다운로드 합니다.\n하단의 다운로드 버튼을 눌러서 다운로드 해주세요.\n900MB의 다운로드를 진행하오니 WIFI 사용을 권장합니다."
+                android:textColor="#989898" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/platter_night"
+            android:clipToOutline="true"
+            android:elevation="1.25dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <android.widget.Button
+                    android:id="@+id/btnDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/button_layout_night"
+                    android:text="다운로드"
+
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/layout_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/attention"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="· 다운로드 하는 동안 읽어주세요!"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/attention"
+                        android:layout_marginTop="10dp"
+                        android:autoLink="web"
+                        android:paddingStart="10dp"
+                        android:text="스콘부짱은 홀로라이브 1기생이자 게이머즈인 시라카미 후부키가 제작했습니다.\n이를 바탕으로 LIVE2D로 제작하신분은 魔王エドワン님이시며, 자세한 정보는 아래 링크에서 확인하실 수 있습니다.\n\nhttps://edowan.fanbox.cc/posts/3820260\n\n이 앱은 OpenAI API를 활용하여 스콘부짱과 대화를 즐길 수 있는 것이 주된 목적입니다.\n앱 내에서는 사용자의 API KEY를 수집하지 않으며, 사용자의 대화 데이터는 보호됩니다.\n\n중요한 점은 해당 어플리케이션은 수익을 목적으로 개발되지 않았습니다.\n\n모든 저작권은 홀로라이브 및 魔王エドワン님에게 속해 있습니다.\n\n사용자 여러분의 안전과 개인정보 보호를 최우선으로 여기며, 즐거운 스콘부짱 경험을 제공하는 데 중점을 둡니다.\n\n* 어플 테스트 및 아낌없는 조언을 해 주신 시라카미 후부키 미니 갤러리 여러분들께 감사의 인사를 드립니다."
+                        android:textColor="#989898"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="26" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBar"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="0%"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp">
+
+            <android.widget.Button
+                android:id="@+id/btn_restart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_layout_night"
+                android:text="다운로드"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">스콘부짱GPT</string>
+    <string name="settingName">설정</string>
+    <string name="okButtonText">확인</string>
+    <string name="screenSetting">· 화면 설정</string>
+    <string name="orientationText">가로모드를 활성화 합니다.</string>
+    <string name="brigntText">밝기를 자동으로 설정합니다.\nOff시 수동으로 설정합니다.\n(갤럭시 기종에서는 동작하지 않을 수 있습니다.)</string>
+    <string name="brigntValue">값</string>
+    <string name="expansionText">스콘부짱의 확대모드를 설정합니다.</string>
+    <string name="expansionOff">일반 모드</string>
+    <string name="expansionOn">확대 모드</string>
+    <string name="sukonbuSetting">· 스콘부짱 설정</string>
+    <string name="sukonbuCall">스콘부짱의 호출 명령어를 설정합니다.\n이 기능은 쉼표를 추가해서 명령어를 추가 할 수 있습니다.\n(기본 : 스콘부짱)</string>
+    <string name="sukonbuCallEdit">여기에 명령어를 입력해주세요</string>
+    <string name="sukonbuConcept">스콘부짱의 컨셉을 설정합니다.\n입력하지 않으면 사전 설정된 컨셉을 사용합니다.</string>
+    <string name="sukonbuConceptEdit">여기에 컨셉를 입력해주세요</string>
+    <string name="sukonbuEmotion">터치에 따른 감정 변화 효과를 줍니다.\n대화는 변경이 안 될수도 있습니다.</string>
+    <string name="openAiSetting">· OPEN AI API 설정</string>
+    <string name="openAiKeyEdit">OPEN AI API의 SECRET KEY를 입력해주세요\nAPI KEY는\nhttps://platform.openai.com/account/api-keys\n에서 발급할 수 있습니다.\n\n* GPT4 이상 부터는 open ai api 에서 결제수단 등록 또는 소량의 크레딧 구매후 다시 key를 발급 받어야 할 수 있습니다.\nGPT4가 나타나지 않는다면 확인 해 주세요.</string>
+    <string name="openAiKeyInsert">SECRET KEY를 입력해주세요.</string>
+    <string name="openAiValidation">검증</string>
+    <string name="openAiKeyValidationing">API KEY 검증하는 장소</string>
+    <string name="demoButtonText">체험판 사용</string>
+    <string name="openAiApiSelect">· OPEN AI API 설정</string>
+    <string name="openAiVersionChoice">ChatGPT의 버전을 선택합니다.</string>
+    <string name="openAiSelect">선택 : ChatGPT4</string>
+    <string name="debugText">· 디버그 모드 설정</string>
+    <string name="debugEnableText">디버그 모드를 활성화 합니다.\n통신의 자세한 내용이 보이게 됩니다.</string>
+    <string name="todo">TODO</string>
+    <string name="introScreen">기본적인 화면의 설정을 사전에 정의합니다.</string>
+    <string name="IntroScreenName">화면 설정</string>
+    <string name="next">다음</string>
+    <string name="prev">이전</string>
+    <string name="introSukonbuSetting">스콘부짱 및 디버그 설정</string>
+    <string name="introSukonbuSettingContent">스콘부짱의 컨셉과 호출 명령어를 설정합니다.</string>
+    <string name="openAiString">CHAT GPT 를 사용하기 위한 API 키와 버전을 설정합니다.</string>
+    <string name="defaultCallType">스콘부짱</string>
+    <string name="defaultConceptText">"당신의 이름은 스콘부짱 이며 여성입니다. 나이는 10살 정도로 추정합니다. 당신은 실제로 존재하는 홀로라이브의 1기생인 시라카미 후부키가 당신을 창조하였으며 그녀의 팬덤의 상징과도 같은 존재입니다. 그러므로 당신도 북극여우이며 모든 행동가짐이  실제로 존재하는 홀로라이브의 1기생인 시라카미 후부키와 똑같습니다. 문장 하나하다마다 인 것이다. 로 마무리 하도록 합니다. 성격은 실제로 존재하는 홀로라이브의 1기생인 시라카미 후부키와 100% 일치하도록 하며 애교가 많은게 특징이지만 고양이가 아니므로 냥체는 사용하지 않습니다.</string>
+    <string name="darkmodeText">다크모드를 활성화 합니다.</string>
+    <string name="head">head</string>
+    <string name="chest">chest</string>
+    <string name="bottom">bottom</string>
+    <string name="bubble">스콘부짱의 답변을 시각으로 표시합니다.</string>
+
+
+
+</resources>

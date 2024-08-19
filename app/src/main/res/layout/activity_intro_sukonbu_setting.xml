@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroSukonbuSettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/intro_sukonbu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/intro_screen_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sukonbu_next_layout"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:paddingLeft="20dp"
+                android:text="@string/introSukonbuSetting"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="35dp"
+                android:text="@string/introSukonbuSettingContent"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#BDBDBD" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="21dp"
+                            android:text="@string/sukonbuCall"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <EditText
+                            android:id="@+id/intro_edit_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edit_round"
+                            android:ems="10"
+                            android:hint="@string/sukonbuCallEdit"
+                            android:inputType="textImeMultiLine"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:selectAllOnFocus="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="21dp"
+                            android:text="@string/sukonbuConcept"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <EditText
+                            android:id="@+id/intro_edit_concept"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edit_round"
+                            android:ems="10"
+                            android:hint="@string/sukonbuConceptEdit"
+                            android:inputType="textImeMultiLine"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:selectAllOnFocus="true" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/intro_switch_emotion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/white"
+                        android:lineSpacingExtra="6.4sp"
+                        android:text="@string/sukonbuEmotion"
+                        android:textColor="#2b2e32"
+                        android:textOff=""
+                        android:textOn=""
+                        android:textSize="17sp"
+                        android:thumb="@drawable/thumb"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:switchMinWidth="0dp"
+                        app:thumbTextPadding="24dp"
+                        app:track="@drawable/track" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/intro_debug_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/white"
+                        android:lineSpacingExtra="6.4sp"
+                        android:text="@string/debugEnableText"
+                        android:textColor="#2b2e32"
+                        android:textOff=""
+                        android:textOn=""
+                        android:textSize="17sp"
+                        android:thumb="@drawable/thumb"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:switchMinWidth="0dp"
+                        app:thumbTextPadding="24dp"
+                        app:track="@drawable/track" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="21dp"
+                        android:layout_marginTop="20dp"
+                        android:text="스콘부짱의 창의성과 정확성을 설정합니다.\n이 설정은 답변 결과의 강도를 수정합니다."
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <SeekBar
+                        android:id="@+id/intro_seekbar_creativity"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:max="10"
+                        android:progress="6" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:text="정확성" />
+
+                        <TextView
+                            android:id="@+id/intro_text_creativity"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/brigntValue"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="15dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="창의성" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/sukonbu_next_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/intro_btn_prev_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_layout"
+                android:text="@string/prev"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <android.widget.Button
+                android:id="@+id/intro_btn_next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_layout"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

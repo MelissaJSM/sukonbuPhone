@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingFragment">
+
+    <View
+        android:id="@+id/fade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="#1F000000" />
+
+    <ImageButton
+        android:id="@+id/btn_side_exit_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FF0000"
+        android:contentDescription="@string/todo" />
+
+    <RelativeLayout
+        android:id="@+id/setting_layout"
+        android:layout_width="0dp"
+        android:layout_height="544dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/platter"
+        android:clipToOutline="true"
+        android:elevation="3dp"
+        tools:ignore="UnusedAttribute">
+
+
+        <RelativeLayout
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/setiing_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:paddingLeft="30dp"
+                        android:text="@string/settingName"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <android.widget.Button
+                        android:id="@+id/btn_ok_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/button_layout"
+                        android:text="@string/okButtonText"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+                </FrameLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#BDBDBD" />
+            </LinearLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/setiing_bar">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:text="@string/screenSetting"
+                            android:textSize="22sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/darkmode_switch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/white"
+                            android:lineSpacingExtra="6.4sp"
+                            android:text="@string/darkmodeText"
+                            android:textColor="#2b2e32"
+                            android:textOff=""
+                            android:textOn=""
+                            android:textSize="17sp"
+                            android:thumb="@drawable/thumb"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:switchMinWidth="0dp"
+                            app:thumbTextPadding="24dp"
+                            app:track="@drawable/track" />
+
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/orientation_switch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/white"
+                            android:lineSpacingExtra="6.4sp"
+                            android:text="@string/orientationText"
+                            android:textColor="#2b2e32"
+                            android:textOff=""
+                            android:textOn=""
+                            android:textSize="17sp"
+                            android:thumb="@drawable/thumb"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:switchMinWidth="0dp"
+                            app:thumbTextPadding="24dp"
+                            app:track="@drawable/track" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_bright"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="21dp"
+                                android:layout_marginEnd="20dp"
+                                android:background="@color/white"
+                                android:lineSpacingExtra="6.4sp"
+                                android:text="@string/brigntText"
+                                android:textColor="#2b2e32"
+                                android:textOff=""
+                                android:textOn=""
+                                android:textSize="17sp"
+                                android:thumb="@drawable/thumb"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:switchMinWidth="0dp"
+                                app:thumbTextPadding="24dp"
+                                app:track="@drawable/track" />
+
+                            <SeekBar
+                                android:id="@+id/seekbar_bright"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:max="10"
+                                android:progress="0" />
+
+                            <TextView
+                                android:id="@+id/text_bright"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:textSize="24sp"
+                                android:text="@string/brigntValue" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/bubble_switch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/white"
+                            android:lineSpacingExtra="6.4sp"
+                            android:text="@string/bubble"
+                            android:textColor="#2b2e32"
+                            android:textOff=""
+                            android:textOn=""
+                            android:textSize="17sp"
+                            android:thumb="@drawable/thumb"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:switchMinWidth="0dp"
+                            app:thumbTextPadding="24dp"
+                            app:track="@drawable/track" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingStart="21dp"
+                                android:text="@string/expansionText"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                tools:ignore="RtlSymmetry" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="3">
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="96dp"
+                                    android:layout_weight="1"
+                                    android:contentDescription="@string/todo"
+                                    android:src="@drawable/img_character_normal"
+                                    tools:ignore="NestedWeights" />
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:contentDescription="@string/todo"
+                                    android:src="@drawable/img_character_expansion" />
+                            </LinearLayout>
+
+
+                            <RadioGroup
+                                android:id="@+id/group_expansion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/btn_expansion_no"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/expansionOff" />
+
+                                <RadioButton
+                                    android:id="@+id/btn_expansion_yes"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/expansionOn" />
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#BDBDBD" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/sukonbuSetting"
+                            android:textSize="22sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="21dp"
+                                android:text="@string/sukonbuCall"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                tools:ignore="RtlSymmetry" />
+
+                            <EditText
+                                android:id="@+id/edit_call"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/edit_round"
+                                android:ems="10"
+                                android:hint="@string/sukonbuCallEdit"
+                                android:inputType="textImeMultiLine"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:selectAllOnFocus="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="21dp"
+                                android:text="@string/sukonbuConcept"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                tools:ignore="RtlSymmetry" />
+
+                            <EditText
+                                android:id="@+id/edit_concept"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/edit_round"
+                                android:ems="10"
+                                android:hint="@string/sukonbuConceptEdit"
+                                android:inputType="textImeMultiLine"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:selectAllOnFocus="true" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_emotion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/white"
+                            android:lineSpacingExtra="6.4sp"
+                            android:text="@string/sukonbuEmotion"
+                            android:textColor="#2b2e32"
+                            android:textOff=""
+                            android:textOn=""
+                            android:textSize="17sp"
+                            android:thumb="@drawable/thumb"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:switchMinWidth="0dp"
+                            app:thumbTextPadding="24dp"
+                            app:track="@drawable/track" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="21dp"
+                            android:layout_marginTop="20dp"
+                            android:text="스콘부짱의 창의성과 정확성을 설정합니다.\n이 설정은 답변 결과의 강도를 수정합니다."
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <SeekBar
+                            android:id="@+id/setting_seekbar_creativity"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:max="10"
+                            android:progress="6" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:text="정확성" />
+
+                            <TextView
+                                android:id="@+id/setting_text_creativity"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/brigntValue"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginRight="15dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="창의성" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="20dp"
+                            android:background="#BDBDBD" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/openAiSetting"
+                            android:textSize="22sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:autoLink="web"
+                                android:paddingStart="21dp"
+                                android:text="@string/openAiKeyEdit"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                tools:ignore="RtlSymmetry" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/edit_api_key"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="4"
+                                    android:autofillHints=""
+                                    android:background="@drawable/edit_round"
+                                    android:ems="10"
+                                    android:hint="@string/openAiKeyInsert"
+                                    android:inputType="textImeMultiLine"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:selectAllOnFocus="true" />
+
+                                <android.widget.Button
+                                    android:id="@+id/btn_verification"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_layout"
+                                    android:text="@string/openAiValidation"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/text_api_result"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/openAiKeyValidationing"
+                                android:textColor="#ff0000" />
+
+                            <android.widget.Button
+                                android:id="@+id/btn_demo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:background="@drawable/button_layout"
+                                android:text="@string/demoButtonText"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#BDBDBD" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/openAiApiSelect"
+                            android:textSize="22sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="21dp"
+                                android:text="@string/openAiVersionChoice"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                tools:ignore="RtlSymmetry" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <Spinner
+                                    android:id="@+id/spinner_gpt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1.5"
+                                    android:autofillHints=""
+                                    android:dropDownWidth="wrap_content"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:spinnerMode="dropdown" />
+
+                                <TextView
+                                    android:id="@+id/text_api_select"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/openAiSelect"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#BDBDBD" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/debugText"
+                            android:textSize="22sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/debug_switch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="21dp"
+                                android:layout_marginEnd="20dp"
+                                android:background="@color/white"
+                                android:lineSpacingExtra="6.4sp"
+                                android:text="@string/debugEnableText"
+                                android:textColor="#2b2e32"
+                                android:textOff=""
+                                android:textOn=""
+                                android:textSize="17sp"
+                                android:thumb="@drawable/thumb"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:switchMinWidth="0dp"
+                                app:thumbTextPadding="24dp"
+                                app:track="@drawable/track" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#BDBDBD" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingStart="10dp"
+                            android:text="· 문의용 식별 번호 확인"
+                            android:textSize="22sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:autoLink="web"
+                            android:paddingStart="21dp"
+                            android:text="문의용 식별번호를 확인합니다\n데모판 초기화 문의나 기타 문의가 필요할때 이 식별번호와 함께 문의해주세요.\n\nEmail : jsm930602@gmail.com"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <TextView
+                            android:id="@+id/btn_identification_key_setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:autoLink="web"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="식별키 결과"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:visibility="gone"
+                            tools:ignore="RtlSymmetry" />
+
+                        <android.widget.Button
+                            android:id="@+id/btn_identification_setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="50dp"
+                            android:background="@drawable/button_layout"
+                            android:text="식별번호 확인"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#BDBDBD" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingStart="10dp"
+                            android:text="· 스콘부짱 다운로드"
+                            android:textSize="22sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:autoLink="web"
+                            android:paddingStart="21dp"
+                            android:text="스콘부짱이 나타나지 않거나 터치해도 반응이 없는 경우 다시 다운로드 받아주세요.\n(900MB 의 데이터를 다운로드합니다. WIFI 사용을 권장합니다.)"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <android.widget.Button
+                            android:id="@+id/btnDownload_setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="50dp"
+                            android:background="@drawable/button_layout"
+                            android:text="다운로드"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+
+                        <LinearLayout
+                            android:id="@+id/progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/container"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="15dp"
+                            android:orientation="vertical">
+
+
+                            <ProgressBar
+                                android:id="@+id/progressBar_setting"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:max="26" />
+
+                            <TextView
+                                android:id="@+id/textView_setting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/progressBar"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="0%"
+                                android:textColor="@color/black"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

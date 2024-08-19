@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <group>
+        <!-- 원본 그래픽 -->
+        <path
+            android:fillColor="#3EAFE9"
+            android:pathData="M18,1.5L18,1.5A16.5,16.5 0,0 1,34.5 18L34.5,18A16.5,16.5 0,0 1,18 34.5L18,34.5A16.5,16.5 0,0 1,1.5 18L1.5,18A16.5,16.5 0,0 1,18 1.5z" />
+        <!-- 테두리를 그리는 새로운 경로 -->
+        <path
+            android:fillColor="@android:color/transparent"
+            android:pathData="M18,1.5L18,1.5A16.5,16.5 0,0 1,34.5 18L34.5,18A16.5,16.5 0,0 1,18 34.5L18,34.5A16.5,16.5 0,0 1,1.5 18L1.5,18A16.5,16.5 0,0 1,18 1.5z"
+            android:strokeWidth="2"
+            android:strokeColor="#ffffff" />
+    </group>
+</vector>
